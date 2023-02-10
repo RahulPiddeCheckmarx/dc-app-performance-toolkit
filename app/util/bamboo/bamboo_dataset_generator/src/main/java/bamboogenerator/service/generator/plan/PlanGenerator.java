@@ -40,8 +40,8 @@ public class PlanGenerator {
                 .key(planInfo.getProjectKey()), planInfo.getPlanName(), planInfo.getPlanKey())
                 .description("DCAPT Bamboo test build plan")
                 .planRepositories(new GitRepository()
-                        .name("dcapt-test-repo")
-                        .url("https://bitbucket.org/atlassianlabs/dcapt-bamboo-test-repo.git")
+                        .name("JavaVulnerableLabE-test-repo")
+                        .url("https://github.com/vbarhate/JavaVulnerableLabE.git")
                         .branch("master"))
                 .variables(new Variable("stack_name", ""))
                 .stages(new Stage("Stage 1")
@@ -51,7 +51,7 @@ public class PlanGenerator {
                                                 .description("Checkout repository task")
                                                 .cleanCheckout(true)
                                                 .checkoutItems(new CheckoutItem()
-                                                        .repository("dcapt-test-repo").path("dcapt-test-repo")),
+                                                        .repository("JavaVulnerableLabE-test-repo").path("JavaVulnerableLabE-test-repo")),
 										new AnyTask(new AtlassianModule("com.cx.checkmarx-bamboo-plugin:checkmarx"))
                                     .description("SAST")
                                     .configuration(new MapBuilder()
