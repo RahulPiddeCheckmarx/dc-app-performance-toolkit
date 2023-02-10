@@ -27,7 +27,7 @@ import static java.lang.System.currentTimeMillis;
 public class Main {
     private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 
-    private static final String BAMBOO_SERVER_URL = "http://0.0.0.0:8085";
+    private static final String BAMBOO_SERVER_URL = "http://ad03cbf5a91784e91a03bed508a34b23-759675898.eu-west-1.elb.amazonaws.com/bamboo";
     private static final String ADMIN_USER_NAME = "admin";
 
     // NOTE: Please make sure you haven't changed these values after initial run
